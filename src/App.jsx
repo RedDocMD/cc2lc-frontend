@@ -1,28 +1,22 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
-import Months from "./Months";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./Home";
 
-function App() {
+function NoMatch() {
   return (
-    <Box mt={5}>
-      <Container>
-        <Grid container alignItems="center" spacing={5}>
-          <Grid item xs={3} />
-          <Grid item xs={6}>
-            <Typography align="center" variant="h2">
-              Chess.com Games
-            </Typography>
-          </Grid>
-          <Grid item xs={3} />
-
-          <Grid item xs={2} />
-          <Grid item xs={8}>
-            <Months />
-          </Grid>
-          <Grid item xs={2} />
-        </Grid>
-      </Container>
-    </Box>
+    <div>
+      <h2>Nothing to see here!</h2>
+      <p>
+        <Link to="/">Go to the home page</Link>
+      </p>
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="*" element={<NoMatch />} />
+    </Routes>
+  );
+}

@@ -1,6 +1,7 @@
-import { Box, Alert, Link, Table, TableCell, TableContainer, TableRow, TableHead, TableBody, Paper } from "@mui/material";
+import { Link, Box, Alert, Table, TableCell, TableContainer, TableRow, TableHead, TableBody, Paper } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Months() {
   const [months, setMonths] = useState([]);
@@ -37,7 +38,7 @@ export default function Months() {
           <TableCell align="left">{monthName}</TableCell>
           <TableCell align="left">{year}</TableCell>
           <TableCell align="left">
-            <Link href="#">Games</Link>
+            <Link component={RouterLink} to="/">Games</Link>
           </TableCell>
         </TableRow>
       );
