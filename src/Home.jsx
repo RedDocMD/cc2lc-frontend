@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import Months from "./Months";
 
-export default function Home() {
+export default function Home({ months, monthsFetchFailed }) {
   return (
     <Box mt={5}>
       <Container>
@@ -16,7 +16,7 @@ export default function Home() {
 
           <Grid item xs={2} />
           <Grid item xs={8}>
-            <Months />
+            <Months months={months} monthsFetchFailed={monthsFetchFailed} />
           </Grid>
           <Grid item xs={2} />
         </Grid>
