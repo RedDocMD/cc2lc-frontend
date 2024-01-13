@@ -1,10 +1,9 @@
-import { Typography } from "@mui/material";
+import Months from "./Months";
 
 function App() {
   return (
     <>
-      <Typography variant="h1">Hello Earthlings!</Typography>
-      <Typography variant="h2">Welcome to React.</Typography>
+      <Months />
     </>
   );
 }
