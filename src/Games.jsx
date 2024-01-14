@@ -108,19 +108,19 @@ export default function GamesPage({ month, year }) {
     <Box mt={5}>
       <Container>
         <Grid container alignItems="center" spacing={5}>
-          <Grid item xs={1} />
-          <Grid item xs={10}>
+          <Grid item xs={0} md={1} />
+          <Grid item xs={12} md={10}>
             <Typography align="center" variant="h2">
               {`${monthToName(month)} ${year}`}
             </Typography>
           </Grid>
-          <Grid item xs={1} />
+          <Grid item xs={0} md={1} />
 
-          <Grid item xs={1} />
-          <Grid item xs={10}>
+          <Grid item xs={0} md={1} />
+          <Grid item xs={12} md={10}>
             <Games month={month} year={year} />
           </Grid>
-          <Grid item xs={1} />
+          <Grid item xs={0} md={1} />
         </Grid>
       </Container>
     </Box>
